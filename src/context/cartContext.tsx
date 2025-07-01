@@ -81,7 +81,7 @@ export const CartProvider = ({ children }: React.PropsWithChildren) => {
     }
   });
 
-  const [optimisticCart, addOptimistic] = useOptimistic(cart);
+  const [, addOptimistic] = useOptimistic(cart);
 
   // Sync cart to localStorage
   useEffect(() => {
