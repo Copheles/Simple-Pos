@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className="w-full">
       <div className="flex-grow min-h-[500px]">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+        <div className="grid grid-cols-2 px-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
           {currentProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}

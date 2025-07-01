@@ -28,7 +28,7 @@ export default function ProductCard({
           <img
             src={imageUrl}
             alt={name}
-            className="w-[170px] h-[180px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
+            className="w-[110px] h-[120px] lg:w-[170px] lg:h-[180px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
           />
         </div>
       </div>
