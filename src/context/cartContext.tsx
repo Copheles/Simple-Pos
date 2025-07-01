@@ -22,6 +22,7 @@ type CartContextType = {
   removeFromCart: (id: number) => void;
   increaseQty: (id: number) => void;
   decreaseQty: (id: number) => void;
+  clearCart: () => void;
   totalItems: number;
 };
 
@@ -39,12 +40,13 @@ const CartContext = createContext<CartContextType>({
     itemsPrice: 0,
     shippingPrice: 0,
     taxPrice: 0,
-    totalPrice: 0
+    totalPrice: 0,
   },
   addToCart: () => {},
   removeFromCart: () => {},
   increaseQty: () => {},
   decreaseQty: () => {},
+  clearCart: () => {},
   totalItems: 0,
 });
 
@@ -106,6 +108,16 @@ export const CartProvider = ({ children }: React.PropsWithChildren) => {
     setCart((prev) => increaseQuantity(prev, id));
   };
 
+  const clearCart = () => {
+    setCart({
+      items: [],
+      itemsPrice: 0,
+      shippingPrice: 0,
+      taxPrice: 0,
+      totalPrice: 0,
+    });
+  };
+
   // Decrease quantity
   const decreaseQty = (id: number) => {
     setCart((prev) => decreaseQuantity(prev, id));
@@ -122,6 +134,7 @@ export const CartProvider = ({ children }: React.PropsWithChildren) => {
         increaseQty,
         decreaseQty,
         totalItems,
+        clearCart,
       }}
     >
       {children}

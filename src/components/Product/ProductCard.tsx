@@ -1,5 +1,5 @@
-import { useCart } from "../context/cartContext";
-import type { Product } from "../data/products";
+import { useCart } from "../../context/cartContext";
+import type { Product } from "../../data/products";
 import { FiShoppingCart } from "react-icons/fi";
 
 export default function ProductCard({
@@ -42,10 +42,10 @@ export default function ProductCard({
       {/* Add to Cart Button at bottom */}
       <div className="absolute top-3 right-0 flex items-end transform -translate-x-1/2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <button
-          className="bg-white text-black p-3 rounded-full cursor-pointer hover:bg-gray-50 transition-colors duration-200 shadow-sm text-xl font-bold"
+          className="bg-white text-black p-3 rounded-full cursor-pointer hover:bg-gray-100 transition-colors duration-200 shadow-sm text-xl font-bold"
           onClick={() => handleAddToCart(id)}
         >
-          <FiShoppingCart className="h-4 w-4 text-xl text-gray-500" />
+          <FiShoppingCart className="h-4 w-4 text-xl text-indigo-500" />
         </button>
       </div>
 

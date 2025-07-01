@@ -1,6 +1,6 @@
 import { GrBasket } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/cartContext";
+import { useCart } from "../../context/cartContext";
 
 export default function CartComponent() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ export default function CartComponent() {
   const handleClick = () => {
     navigate("/cart");
   };
-  
+
   return (
     <div
       className="w-10 h-10 relative flex justify-center items-center cursor-pointer border border-gray-200 rounded-lg hover:bg-gray-100"

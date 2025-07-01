@@ -5,3 +5,34 @@
 :root {
   font-family: "Roboto Flex", "sans-serif";
 }
+
+@keyframes checkmark-stroke {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmark-scale {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-checkmark {
+  animation: checkmark-scale 0.7s ease-in-out both;
+}
+
+.animate-checkmark-stroke {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: checkmark-stroke 0.7s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+}
